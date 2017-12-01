@@ -7,22 +7,22 @@ except:
   print("NOPEEEE, {0} is not a number!".format(argv[1]))
   exit()
 info = []
-for list in range(0,len(str(b))):
+for place1 in range(0,len(str(b))):
   try:
-    if (str(b)[list] == str(b)[list+1]):
-      #"yes, because {0} is == to {1}".format(str(b)[list],str(b)[list+1])
-      info.append(str(b)[list])
+    if (str(b)[place1] == str(b)[place1+1]):
+      #yes, because the number we are currently looking at is == to that current number + one
+      info.append(str(b)[place1])
     else:
-      #"no, because {0} is != to {1}".format(str(b)[list],str(b)[list+1])
+      #no, because the number we are currently looking at is != to that current number + one
       pass
   except:
-    if (str(b)[list] == str(b)[0]):
-      #"yes, because {0} is == to {1}".format(str(b)[list],str(b)[0])
-      info.append(str(b)[list])
+    if (str(b)[place1] == str(b)[0]):
+      #yes, because the number we are currently looking at is == to the first digit of the number
+      info.append(str(b)[place1])
     else:
-      #"no, because {0} is != to {1}".format(str(b)[list],str(b)[0])
+      #no, because the number we are currently looking at is != to the first digit of the number
       pass
 total = 0
-for place in range(0,len(info)):
-  total = total + int(info[place])
+for place2 in range(0,len(info)):
+  total = total + int(info[place2])
 print(total)

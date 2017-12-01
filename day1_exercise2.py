@@ -11,17 +11,17 @@ length = len(str(b))
 for place1 in range(0,length):
   try:
     if (str(b)[place1] == str(b)[int(place1+(length/2))]):
-      #"yes, because {0} is == to {1}".format(str(b)[list],str(b)[list+1])
+      #yes, because the number we are currently looking at is == to that current number + the length of the list divided by 2
       info.append(str(b)[place1])
     else:
-      #"no, because {0} is != to {1}".format(str(b)[list],str(b)[list+1])
+      #no, because the number we are currently looking at is != to that current number + the length of the list divided by 2
       pass
   except:
     if (str(b)[place1] == str(b)[int((place1+(length/2))-length)]):
-      #"yes, because {0} is == to {1}".format(str(b)[list],str(b)[0])
+      #yes, because the number we are currently looking at is == to (that current number + the length of the list divided by 2) - the full length of the list
       info.append(str(b)[place1])
     else:
-      #"no, because {0} is != to {1}".format(str(b)[list],str(b)[0])
+      #"no, because the number we are currently looking at is != to (that current number + the length of the list divided by 2) - the full length of the list
       pass
 total = 0
 for place2 in range(0,len(info)):
